@@ -1,4 +1,4 @@
-components with some coding.
+This is a simple yet interesting project that combines basic electronic components with some coding
 
 #Important Note:
 The app required to operate this project is only available for Android devices. You can download it from the Play Store using the link below:
