@@ -1,4 +1,4 @@
-![circuit_image(1)](https://github.com/user-attachments/assets/c8c727ac-cd43-48d1-b3ec-20cf0464a98b)This is a simple yet interesting project that combines basic electronic components with some coding.
+components with some coding.
 
 #Important Note:
 The app required to operate this project is only available for Android devices. You can download it from the Play Store using the link below:
