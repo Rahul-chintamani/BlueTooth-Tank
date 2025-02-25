@@ -12,15 +12,15 @@ This is a Bluetooth-controlled tank that can move and shoot Nerf bullets, all fr
 
 How It Works
 
-1️⃣ Control the tank using the Bluetooth Electronics app on Android.
+1. Control the tank using the Bluetooth Electronics app on Android.
 
-2️⃣ Arduino Uno receives Bluetooth signals from the HC-05 module.
+2. Arduino Uno receives Bluetooth signals from the HC-05 module.
 
-3️⃣ L298N motor driver controls the DC motors, moving the tank forward, backward, left, and right.
+3. L298N motor driver controls the DC motors, moving the tank forward, backward, left, and right.
 
-4️⃣ A servo motor adjusts the Nerf gun’s aim (up/down).
+4. A servo motor adjusts the Nerf gun’s aim (up/down).
 
-5️⃣ A solenoid or extra servo fires the Nerf bullets.
+5. A solenoid or extra servo fires the Nerf bullets.
 
 
 ---
