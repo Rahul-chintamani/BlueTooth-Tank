@@ -3,7 +3,7 @@ Bluetooth-Controlled Nerf Tank 🚀🔫
 
 This is a Bluetooth-controlled tank that can move and shoot Nerf bullets, all from your phone! Using an Arduino Uno, an HC-05 Bluetooth module, and an L298N motor driver, this project is a fun way to explore robotics, wireless control, and motor-driven mechanisms.
 
-📥 Download the App: Bluetooth Electronics
+📥 Download the App: https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth
 
 📧 Contact: chintamanirahul80@gmail.com
 
@@ -121,24 +121,22 @@ I'm open to discussion and suggestions! Let me know how this can be improved.
 ---
 
 📷 Demo Video & Images
+![IMG1](https://github.com/user-attachments/assets/f955eba1-2043-4cc6-b281-e734bbfca7dc)
 
-(Coming soon!)
+![IMG2](https://github.com/user-attachments/assets/e32cf
 
+https://github.com/user-attachments/assets/2bdd1bee-5695-4ab7-86dd-2e0aa4b65be943f-f471-45e8-a9be-4bd45136addc)
 
+![circuit_image(1)](https://github.com/user-attachments/assets/f85ec554-28e1-4136-afae-93219d9bc209)
 ---
 
 🚀 Time to Nerf Battle! Have fun! 🔫🎯
 
 
 
-![circuit_image(1)](https://github.com/user-attachments/assets/f85ec554-28e1-4136-afae-93219d9bc209)
 
-![IMG1](https://github.com/user-attachments/assets/f955eba1-2043-4cc6-b281-e734bbfca7dc)
 
-![IMG2](https://github.com/user-attachments/assets/e32cf
 
-https://github.com/user-attachments/assets/2bdd1bee-5695-4ab7-86dd-2e0aa4b65be9
 
-43f-f471-45e8-a9be-4bd45136addc)
 
 
