@@ -123,9 +123,6 @@ I'm open to discussion and suggestions! Let me know how this can be improved.
 📷 Demo Video & Images
 ![IMG1](https://github.com/user-attachments/assets/f955eba1-2043-4cc6-b281-e734bbfca7dc)
 
-![IMG2](https://github.com/user-attachments/assets/e32cf
-
-https://github.com/user-attachments/assets/2bdd1bee-5695-4ab7-86dd-2e0aa4b65be943f-f471-45e8-a9be-4bd45136addc)
 
 ![circuit_image(1)](https://github.com/user-attachments/assets/f85ec554-28e1-4136-afae-93219d9bc209)
 ---
