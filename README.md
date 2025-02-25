@@ -121,7 +121,12 @@ I'm open to discussion and suggestions! Let me know how this can be improved.
 ---
 
 📷 Demo Video & Images
+
 ![IMG1](https://github.com/user-attachments/assets/f955eba1-2043-4cc6-b281-e734bbfca7dc)
+
+
+https://github.com/user-attachments/assets/785c896a-60ae-474f-8bfa-e7aaecc23034
+
 
 
 ![circuit_image(1)](https://github.com/user-attachments/assets/f85ec554-28e1-4136-afae-93219d9bc209)
