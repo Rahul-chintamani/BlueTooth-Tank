@@ -52,7 +52,7 @@ a[POWER] ---> b(Arduino-uno) & c(L298 Motor Driver)
 d(HC-05 Bluetooth Module)-->b
 b --> d & c & g
 c --> f(Motors)
-a --> f
+
 a --> g(Servo Motors)
 ```
 ---
