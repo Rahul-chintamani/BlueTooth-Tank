@@ -1,17 +1,26 @@
 
-Bluetooth-Controlled Nerf Tank 🚀🔫
-
-This is a Bluetooth-controlled tank that can move and shoot Nerf bullets, all from your phone! Using an Arduino Uno, an HC-05 Bluetooth module, and an L298N motor driver, this project is a fun way to explore robotics, wireless control, and motor-driven mechanisms.
+Bluetooth-Controlled Nerf Tank
+---
+This project is a Bluetooth-controlled tank that can move and fire Nerf bullets, all operated from a smartphone. Built using an Arduino Uno, an HC-05 Bluetooth module, and an L298N motor driver, this project explores robotics, wireless control, and motor-driven mechanisms in a structured and practical way.
 
 📥 Download the App: https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth
 
 📧 Contact: chintamanirahul80@gmail.com
 
 
+
 ---
+Project Overview
+---
+1. The tank is controlled via the Bluetooth Electronics app on an Android device.
+2. The Arduino Uno processes Bluetooth signals received from the HC-05 module.
+3. The L298N motor driver controls the DC motors, enabling movement in all directions.
+4. A servo motor adjusts the Nerf gun’s aim vertically.
+5. A solenoid or additional servo motor triggers the firing mechanism.
 
+---
 How It Works
-
+---
 1. Control the tank using the Bluetooth Electronics app on Android.
 
 2. Arduino Uno receives Bluetooth signals from the HC-05 module.
@@ -25,99 +34,152 @@ How It Works
 
 ---
 
-Hardware Components 🛠
-
+Hardware Components
+---
+1. Arduino Uno – The microcontroller that processes commands
+2. HC-05 Bluetooth Module – Enables wireless communication
+3. L298N Motor Driver – Controls the motors for movement
+4. DC Motors – Provide propulsion
+5. Servo Motor – Adjusts the gun’s aim
+6. Battery Pack – Powers the system
 
 ---
+Signal & Electrical Flow-chart
+---
+``` mermaid
+flowchart TB
+a[POWER] ---> b(Arduino-uno) & c(L298 Motor Driver)
+d(HC-05 Bluetooth Module)-->b
+b --> d & c & g
+c --> f(Motors)
+a --> f
+a --> g(Servo Motors)
+```
+---
+``` mermaid 
+flowchart LR
+-ve --> GND1 & GND3
+GND2 --> GND1
++ve --> 12V 
++ve ---> VIN
++5V1 --> +5V2 --> +5V3
+TX1 --> RX2
+TX2 --> RX1
+Digital-Pins --> IN & ENA
 
-Wiring Diagram & Setup 📝
+    subgraph L298N
+    IN ~~~ ENA ~~~ GND3 ~~~ 12V ~~~ +5V3
+    end
+    subgraph Arduino Uno
+        direction TB    
+        Digital-Pins ~~~ +5V1 ~~~ GND1 ~~~ VIN ~~~ TX1 ~~~ RX1
+    end
 
-1️⃣ HC-05 Bluetooth Module
+    subgraph Power Supply
+        direction LR
+        +ve ~~~ -ve
+    end
+    subgraph Bluetooth module
+    TX2 ~~~ RX2 ~~~ +5V2 ~~~ GND2
+    end
 
-VCC → 5V (Arduino Uno)
-
-GND → GND
-
-TX → RX (Arduino Uno)
-
-RX → TX (Arduino Uno)
-
-
-2️⃣ L298N Motor Driver & Motors
-
-Motor Outputs → Connected to DC motors
-
-12V Power Input → Battery Pack
-
-GND → GND (shared with Arduino)
-
-IN1, IN2, IN3, IN4 → Arduino digital pins
-
-
-3️⃣ Servo for Aiming
-
-VCC → 5V (Arduino)
-
-GND → GND
-
-Signal → PWM pin (Arduino)
-
-
-4️⃣ Solenoid/Servo for Firing
-
-Solenoid: Controlled via a transistor circuit
-
-Servo: Connected like the aiming servo
-
-
-5️⃣ Powering the System
-
-Arduino Uno powered via battery (or USB during testing).
-
-Motors & solenoid powered separately from L298N (ensure proper voltage).
-
-
-
+```
+Assembly
 ---
 
-How to Set It Up 🛠
+1. 3D Printing the Model
+Download the CAD model from the provided files and 3D print the components.
+   Alternatively, if you have a custom-built model, the provided code will still function correctly for three SG90 servo motors and two DC motors.
 
-1️⃣ Assemble the tank chassis and attach the motors, L298N, and HC-05 module.
-2️⃣ Wire all components as per the diagram above.
-3️⃣ Upload the Arduino code to the Uno.
-4️⃣ Install the Bluetooth Electronics app and pair it with HC-05.
-5️⃣ Start controlling your tank! 🚗💨🔫
+2. Wiring and Connections
+Follow the circuit diagram carefully to connect all components.
+   Double-check all connections twice to ensure proper setup.
+3. Important Safety Note
+Do NOT connect a +12V power source directly to the HC-05 Bluetooth module, as it can only handle a maximum of +5V.
+Ensure the Bluetooth module receives power within its safe operating range.
+4. Servo Motor Configuration
+The system uses three SG90 servo motors:
+Two servos for controlling orientation.
+One servo dedicated to launching Nerf bullets.
+5. 3D Printed Components
+If using the downloaded CAD model, refer to the images below for assembly guidance.
+There are a total of four 3D-printable parts, designed to snap-fit together with respect to the servo motor placement.
+Ensure that the servo mounts align correctly for smooth movement and proper firing operation. 
+
+
+
+1.) HC-05 Bluetooth Module
+
+i. VCC → 5V (Arduino Uno)
+
+ii. GND → GND (Arduino Uno)
+
+iii. TX → RX (Arduino Uno)
+
+iv. RX → TX (Arduino Uno)
+
+Important: Do NOT connect 12V directly to the HC-05, as it can only handle 5V max.
+
+2.) DC Motors & L298N Motor Driver
+
+i. Motor 1 (Right/Left Movement)IN1 → Arduino Pin2
+
+ii. IN2 → Arduino Pin 3
+
+iii. Enable Pin (Speed Control) → Arduino Pin 5
+
+iv. Motor 2 (Forward/Backward Movement)IN3 → Arduino Pin4
+
+v. IN4 → Arduino Pin 7
+
+vi. Enable Pin (Speed Control) → Arduino Pin 6
+
+vii. Power Connections (L298N Motor Driver)
+
+viii.12V Power Input → Battery Pack (12V)
+
+ix. GND → Common Ground (shared with Arduino)
+
+x. 5V Output (from L298N) → Optional: Can power Arduino if needed
+
+3.) Servo Motors
+
+i. Servo 1 (Aiming - Slider A Control) → Arduino Pin 9
+
+ii. Servo 2 (Aiming - Slider B Control) → Arduino Pin 10
+
+iii. Servo 3 (Firing - Button T Control) → Arduino Pin 11
+
 
 
 ---
 
 Troubleshooting & Tips
-
-✅ Bluetooth Not Connecting?
+---
+Bluetooth Not Connecting?
 
 Check if HC-05 is in pairing mode (LED should blink).
 
 Make sure the TX/RX pins are properly connected.
 
 
-✅ Motors Not Moving?
+Motors Not Moving?
 
 Ensure L298N is getting enough power (separate power source if needed).
 
 Double-check Arduino pin connections.
 
 
-✅ Shooting Not Working?
+Shooting Not Working?
 
-If using a solenoid, check if the transistor is wired correctly.
-
-If using a servo, ensure the PWM signal is being sent.
+while  using a servo, ensure the PWM signal is being sent.
 
 
 
 ---
 
-Future Improvements 🚀
+Future Improvements 
+---
 
 I'm open to discussion and suggestions! Let me know how this can be improved.
 
@@ -136,13 +198,4 @@ https://github.com/user-attachments/assets/785c896a-60ae-474f-8bfa-e7aaecc23034
 ![circuit_image(1)](https://github.com/user-attachments/assets/f85ec554-28e1-4136-afae-93219d9bc209)
 ---
 
-🚀 Time to Nerf Battle! Have fun! 🔫🎯
-
-
-
-
-
-
-
-
-
+Time to Nerf Battle! Have fun
