@@ -3,7 +3,8 @@ Bluetooth-Controlled Nerf Tank
 ---
 This project is a Bluetooth-controlled tank that can move and fire Nerf bullets, all operated from a smartphone. Built using an Arduino Uno, an HC-05 Bluetooth module, and an L298N motor driver, this project explores robotics, wireless control, and motor-driven mechanisms in a structured and practical way.
 
-📥 Download the App: https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth
+📥 Download the app:
+https://drive.google.com/file/d/1fYWybB9JFS7odWfuK9QOOxL33iguJAc_/view?usp=drivesdk
 
 📧 Contact: chintamanirahul80@gmail.com
 
